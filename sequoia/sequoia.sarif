@@ -1,0 +1,6173 @@
+{
+  "$schema" : "https://json.schemastore.org/sarif-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "CodeQL",
+        "organization" : "GitHub",
+        "semanticVersion" : "2.12.6",
+        "rules" : [ {
+          "id" : "cpp/sign-conversion-pointer-arithmetic",
+          "name" : "cpp/sign-conversion-pointer-arithmetic",
+          "shortDescription" : {
+            "text" : "unsigned to signed used in pointer arithmetic"
+          },
+          "fullDescription" : {
+            "text" : "finds unsigned to signed conversions used in pointer arithmetic, potentially causing an out-of-bound access"
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "reliability", "security", "external/cwe/cwe-787" ],
+            "author" : "Jordy Zomer",
+            "description" : "finds unsigned to signed conversions used in pointer arithmetic, potentially causing an out-of-bound access",
+            "id" : "cpp/sign-conversion-pointer-arithmetic",
+            "kind" : "problem",
+            "name" : "unsigned to signed used in pointer arithmetic",
+            "problem.severity" : "warning"
+          }
+        } ]
+      },
+      "extensions" : [ {
+        "name" : "legacy-upgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///home/surovic/git/codeql/legacy-upgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///home/surovic/git/codeql/legacy-upgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "my-github-user/my-custom-libraries",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///home/surovic/git/sequoia/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///home/surovic/git/sequoia/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      } ]
+    },
+    "artifacts" : [ {
+      "location" : {
+        "uri" : "arch/x86/kernel/cpu/cacheinfo.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 0
+      }
+    }, {
+      "location" : {
+        "uri" : "crypto/ccm.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 1
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/acpi/acpi_pcc.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 2
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/mailbox/pcc.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 3
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/dma/hsu/hsu.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 4
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/dma/hsu/hsu.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 5
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 6
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 7
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/pci/pci-sysfs.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 8
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/sysfs/file.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 9
+      }
+    }, {
+      "location" : {
+        "uri" : "drivers/net/virtio_net.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 10
+      }
+    }, {
+      "location" : {
+        "uri" : "include/net/xdp.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 11
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/efivarfs/inode.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 12
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/efivarfs/super.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 13
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/ext4/namei.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 14
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/ext4/resize.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 15
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/ext4/inode.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 16
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/ext4/xattr.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 17
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/seq_file.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 18
+      }
+    }, {
+      "location" : {
+        "uri" : "fs/d_path.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 19
+      }
+    }, {
+      "location" : {
+        "uri" : "kernel/bpf/core.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 20
+      }
+    }, {
+      "location" : {
+        "uri" : "lib/seq_buf.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 21
+      }
+    }, {
+      "location" : {
+        "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 22
+      }
+    }, {
+      "location" : {
+        "uri" : "lib/zstd/common/zstd_internal.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 23
+      }
+    }, {
+      "location" : {
+        "uri" : "net/core/dev.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 24
+      }
+    }, {
+      "location" : {
+        "uri" : "net/core/flow_dissector.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 25
+      }
+    }, {
+      "location" : {
+        "uri" : "include/linux/skbuff.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 26
+      }
+    }, {
+      "location" : {
+        "uri" : "net/core/net-sysfs.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 27
+      }
+    }, {
+      "location" : {
+        "uri" : "net/core/skbuff.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 28
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ethernet/eth.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 29
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv6/ip6_offload.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 30
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv4/af_inet.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 31
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv4/udp_offload.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 32
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv4/ip_output.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 33
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv4/netfilter.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 34
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv4/tcp.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 35
+      }
+    }, {
+      "location" : {
+        "uri" : "include/net/sock.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 36
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv6/ah6.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 37
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv6/ip6_input.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 38
+      }
+    }, {
+      "location" : {
+        "uri" : "include/net/addrconf.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 39
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv6/ip6_output.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 40
+      }
+    }, {
+      "location" : {
+        "uri" : "net/ipv6/netfilter.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 41
+      }
+    }, {
+      "location" : {
+        "uri" : "include/net/sctp/checksum.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 42
+      }
+    }, {
+      "location" : {
+        "uri" : "net/netfilter/nf_nat_proto.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 43
+      }
+    }, {
+      "location" : {
+        "uri" : "net/netfilter/x_tables.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 44
+      }
+    }, {
+      "location" : {
+        "uri" : "net/packet/af_packet.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 45
+      }
+    }, {
+      "location" : {
+        "uri" : "include/linux/netdevice.h",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 46
+      }
+    }, {
+      "location" : {
+        "uri" : "net/sunrpc/socklib.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 47
+      }
+    } ],
+    "results" : [ {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to __cache_cpumap_setup](1)  passes an unsigned int to a function that requires a signed int: [__cache_cpumap_setup](2). And then used in pointer arithmetic: [index](3)\nThis call: [call to __cache_cpumap_setup](1)  passes an unsigned int to a function that requires a signed int: [__cache_cpumap_setup](2). And then used in pointer arithmetic: [index](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "arch/x86/kernel/cpu/cacheinfo.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 1041,
+            "startColumn" : 3,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "261a153f9b6427ae:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "arch/x86/kernel/cpu/cacheinfo.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 1041,
+            "startColumn" : 3,
+            "endColumn" : 23
+          }
+        },
+        "message" : {
+          "text" : "call to __cache_cpumap_setup"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "arch/x86/kernel/cpu/cacheinfo.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 945,
+            "startColumn" : 13,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "__cache_cpumap_setup"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "arch/x86/kernel/cpu/cacheinfo.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 960,
+            "startColumn" : 39,
+            "endColumn" : 44
+          }
+        },
+        "message" : {
+          "text" : "index"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "arch/x86/kernel/cpu/cacheinfo.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 975,
+            "startColumn" : 43,
+            "endColumn" : 48
+          }
+        },
+        "message" : {
+          "text" : "index"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to set_msg_len](1)  passes an unsigned int to a function that requires a signed int: [set_msg_len](2). And then used in pointer arithmetic: [csize](3)\nThis call: [call to set_msg_len](1)  passes an unsigned int to a function that requires a signed int: [set_msg_len](2). And then used in pointer arithmetic: [csize](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "crypto/ccm.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 1
+          },
+          "region" : {
+            "startLine" : 146,
+            "startColumn" : 9,
+            "endColumn" : 20
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "4545eb1194ca9536:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "crypto/ccm.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 1
+          },
+          "region" : {
+            "startLine" : 146,
+            "startColumn" : 9,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "call to set_msg_len"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "crypto/ccm.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 1
+          },
+          "region" : {
+            "startLine" : 69,
+            "startColumn" : 12,
+            "endColumn" : 23
+          }
+        },
+        "message" : {
+          "text" : "set_msg_len"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "crypto/ccm.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 1
+          },
+          "region" : {
+            "startLine" : 82,
+            "startColumn" : 17,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "csize"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "crypto/ccm.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 1
+          },
+          "region" : {
+            "startLine" : 82,
+            "startColumn" : 42,
+            "endColumn" : 47
+          }
+        },
+        "message" : {
+          "text" : "csize"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to pcc_mbox_request_channel](1)  passes an unsigned int to a function that requires a signed int: [pcc_mbox_request_channel](2). And then used in pointer arithmetic: [subspace_id](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/acpi/acpi_pcc.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 2
+          },
+          "region" : {
+            "startLine" : 69,
+            "startColumn" : 19,
+            "endColumn" : 43
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "2a6bcec7f4eb3b7f:1",
+        "primaryLocationStartColumnFingerprint" : "17"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/acpi/acpi_pcc.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 2
+          },
+          "region" : {
+            "startLine" : 69,
+            "startColumn" : 19,
+            "endColumn" : 43
+          }
+        },
+        "message" : {
+          "text" : "call to pcc_mbox_request_channel"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/mailbox/pcc.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 3
+          },
+          "region" : {
+            "startLine" : 281,
+            "endColumn" : 25
+          }
+        },
+        "message" : {
+          "text" : "pcc_mbox_request_channel"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/mailbox/pcc.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 3
+          },
+          "region" : {
+            "startLine" : 291,
+            "startColumn" : 22,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "subspace_id"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to hsu_chan_writel](1)  passes an unsigned int to a function that requires a signed int: [hsu_chan_writel](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 4
+          },
+          "region" : {
+            "startLine" : 87,
+            "startColumn" : 3,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "4277374e9ef80432:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 4
+          },
+          "region" : {
+            "startLine" : 87,
+            "startColumn" : 3,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to hsu_chan_writel"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 5
+          },
+          "region" : {
+            "startLine" : 108,
+            "startColumn" : 20,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "hsu_chan_writel"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 5
+          },
+          "region" : {
+            "startLine" : 111,
+            "startColumn" : 28,
+            "endColumn" : 34
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to hsu_chan_writel](1)  passes an unsigned int to a function that requires a signed int: [hsu_chan_writel](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 4
+          },
+          "region" : {
+            "startLine" : 88,
+            "startColumn" : 3,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "b634f052e632924b:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 4
+          },
+          "region" : {
+            "startLine" : 88,
+            "startColumn" : 3,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to hsu_chan_writel"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 5
+          },
+          "region" : {
+            "startLine" : 108,
+            "startColumn" : 20,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "hsu_chan_writel"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/dma/hsu/hsu.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 5
+          },
+          "region" : {
+            "startLine" : 111,
+            "startColumn" : 28,
+            "endColumn" : 34
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to shmem_pwrite](1)  passes an unsigned int to a function that requires a signed int: [shmem_pwrite](2). And then used in pointer arithmetic: [offset](3)\nThis call: [call to shmem_pwrite](1)  passes an unsigned int to a function that requires a signed int: [shmem_pwrite](2). And then used in pointer arithmetic: [offset](4)\nThis call: [call to shmem_pwrite](1)  passes an unsigned int to a function that requires a signed int: [shmem_pwrite](2). And then used in pointer arithmetic: [offset](5)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 702,
+            "startColumn" : 9,
+            "endColumn" : 21
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "fec27decc72e145b:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 702,
+            "startColumn" : 9,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "call to shmem_pwrite"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 639,
+            "endColumn" : 13
+          }
+        },
+        "message" : {
+          "text" : "shmem_pwrite"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 649,
+            "startColumn" : 34,
+            "endColumn" : 40
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 651,
+            "startColumn" : 33,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      }, {
+        "id" : 5,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 653,
+            "startColumn" : 34,
+            "endColumn" : 40
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ggtt_write](1)  passes an unsigned int to a function that requires a signed int: [ggtt_write](2). And then used in pointer arithmetic: [offset](3)\nThis call: [call to ggtt_write](1)  passes an unsigned int to a function that requires a signed int: [ggtt_write](2). And then used in pointer arithmetic: [offset](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 613,
+            "startColumn" : 7,
+            "endColumn" : 17
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "daa0c744328e3dc2:1",
+        "primaryLocationStartColumnFingerprint" : "4"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 613,
+            "startColumn" : 7,
+            "endColumn" : 17
+          }
+        },
+        "message" : {
+          "text" : "call to ggtt_write"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 513,
+            "endColumn" : 11
+          }
+        },
+        "message" : {
+          "text" : "ggtt_write"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 522,
+            "startColumn" : 72,
+            "endColumn" : 78
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 527,
+            "startColumn" : 54,
+            "endColumn" : 60
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to gtt_user_read](1)  passes an unsigned int to a function that requires a signed int: [gtt_user_read](2). And then used in pointer arithmetic: [offset](3)\nThis call: [call to gtt_user_read](1)  passes an unsigned int to a function that requires a signed int: [gtt_user_read](2). And then used in pointer arithmetic: [offset](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 429,
+            "startColumn" : 7,
+            "endColumn" : 20
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "e68d70b1ecb5cd5:1",
+        "primaryLocationStartColumnFingerprint" : "4"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 429,
+            "startColumn" : 7,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "call to gtt_user_read"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 281,
+            "endColumn" : 14
+          }
+        },
+        "message" : {
+          "text" : "gtt_user_read"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 291,
+            "startColumn" : 34,
+            "endColumn" : 40
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 297,
+            "startColumn" : 31,
+            "endColumn" : 37
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to shmem_pread](1)  passes an unsigned int to a function that requires a signed int: [shmem_pread](2). And then used in pointer arithmetic: [offset](3)\nThis call: [call to shmem_pread](1)  passes an unsigned int to a function that requires a signed int: [shmem_pread](2). And then used in pointer arithmetic: [offset](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 260,
+            "startColumn" : 9,
+            "endColumn" : 20
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "b805d347d2404fa:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 260,
+            "startColumn" : 9,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "call to shmem_pread"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 209,
+            "endColumn" : 12
+          }
+        },
+        "message" : {
+          "text" : "shmem_pread"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 218,
+            "startColumn" : 34,
+            "endColumn" : 40
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/gpu/drm/i915/i915_gem.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 6
+          },
+          "region" : {
+            "startLine" : 220,
+            "startColumn" : 42,
+            "endColumn" : 48
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to reg_pattern_test](1)  passes an unsigned int to a function that requires a signed int: [reg_pattern_test](2). And then used in pointer arithmetic: [reg](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 773,
+            "startColumn" : 4,
+            "endLine" : 774,
+            "endColumn" : 30
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "b65f1f02c70eceb:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 773,
+            "startColumn" : 4,
+            "endLine" : 774,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "call to reg_pattern_test"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 655,
+            "startColumn" : 13,
+            "endColumn" : 29
+          }
+        },
+        "message" : {
+          "text" : "reg_pattern_test"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 662,
+            "startColumn" : 38,
+            "endColumn" : 41
+          }
+        },
+        "message" : {
+          "text" : "reg"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to reg_pattern_test](1)  passes an unsigned int to a function that requires a signed int: [reg_pattern_test](2). And then used in pointer arithmetic: [reg](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 785,
+            "startColumn" : 3,
+            "endColumn" : 59
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "73174952323a6436:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 785,
+            "startColumn" : 3,
+            "endColumn" : 59
+          }
+        },
+        "message" : {
+          "text" : "call to reg_pattern_test"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 655,
+            "startColumn" : 13,
+            "endColumn" : 29
+          }
+        },
+        "message" : {
+          "text" : "reg_pattern_test"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/ethernet/intel/e1000/e1000_ethtool.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 7
+          },
+          "region" : {
+            "startLine" : 662,
+            "startColumn" : 38,
+            "endColumn" : 41
+          }
+        },
+        "message" : {
+          "text" : "reg"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to sysfs_emit_at](1)  passes an unsigned int to a function that requires a signed int: [sysfs_emit_at](2). And then used in pointer arithmetic: [at](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/pci/pci-sysfs.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 8
+          },
+          "region" : {
+            "startLine" : 176,
+            "startColumn" : 10,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "67d788538e8985df:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/pci/pci-sysfs.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 8
+          },
+          "region" : {
+            "startLine" : 176,
+            "startColumn" : 10,
+            "endColumn" : 23
+          }
+        },
+        "message" : {
+          "text" : "call to sysfs_emit_at"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/sysfs/file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 9
+          },
+          "region" : {
+            "startLine" : 757,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "sysfs_emit_at"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/sysfs/file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 9
+          },
+          "region" : {
+            "startLine" : 767,
+            "startColumn" : 25,
+            "endColumn" : 27
+          }
+        },
+        "message" : {
+          "text" : "at"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xdp_prepare_buff](1)  passes an unsigned int to a function that requires a signed int: [xdp_prepare_buff](2). And then used in pointer arithmetic: [data_len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 1099,
+            "startColumn" : 2,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "9fb77a0e14f46853:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 1099,
+            "startColumn" : 2,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to xdp_prepare_buff"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 126,
+            "endColumn" : 17
+          }
+        },
+        "message" : {
+          "text" : "xdp_prepare_buff"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 133,
+            "startColumn" : 25,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "data_len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xdp_linearize_page](1)  passes an unsigned int to a function that requires a signed int: [xdp_linearize_page](2). And then used in pointer arithmetic: [page_off](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 918,
+            "startColumn" : 15,
+            "endColumn" : 33
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "7ae5b0e24e758f12:1",
+        "primaryLocationStartColumnFingerprint" : "11"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 918,
+            "startColumn" : 15,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "call to xdp_linearize_page"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 810,
+            "startColumn" : 21,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "xdp_linearize_page"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 822,
+            "startColumn" : 30,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "page_off"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xdp_prepare_buff](1)  passes an unsigned int to a function that requires a signed int: [xdp_prepare_buff](2). And then used in pointer arithmetic: [headroom](3)\nThis call: [call to xdp_prepare_buff](1)  passes an unsigned int to a function that requires a signed int: [xdp_prepare_buff](2). And then used in pointer arithmetic: [data_len](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 930,
+            "startColumn" : 3,
+            "endColumn" : 19
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5ddfbb8a8812cd81:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "drivers/net/virtio_net.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 10
+          },
+          "region" : {
+            "startLine" : 930,
+            "startColumn" : 3,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "call to xdp_prepare_buff"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 126,
+            "endColumn" : 17
+          }
+        },
+        "message" : {
+          "text" : "xdp_prepare_buff"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 129,
+            "startColumn" : 37,
+            "endColumn" : 45
+          }
+        },
+        "message" : {
+          "text" : "headroom"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 133,
+            "startColumn" : 25,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "data_len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to efivarfs_valid_name](1)  passes an unsigned int to a function that requires a signed int: [efivarfs_valid_name](2). And then used in pointer arithmetic: [len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 81,
+            "startColumn" : 7,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "1e68993dfe2870b4:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 81,
+            "startColumn" : 7,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "call to efivarfs_valid_name"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 50,
+            "startColumn" : 6,
+            "endColumn" : 25
+          }
+        },
+        "message" : {
+          "text" : "efivarfs_valid_name"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 52,
+            "startColumn" : 24,
+            "endColumn" : 27
+          }
+        },
+        "message" : {
+          "text" : "len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to efivarfs_valid_name](1)  passes an unsigned int to a function that requires a signed int: [efivarfs_valid_name](2). And then used in pointer arithmetic: [len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/super.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 13
+          },
+          "region" : {
+            "startLine" : 66,
+            "startColumn" : 7,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ec09f883ba7541fa:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/super.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 13
+          },
+          "region" : {
+            "startLine" : 66,
+            "startColumn" : 7,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "call to efivarfs_valid_name"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 50,
+            "startColumn" : 6,
+            "endColumn" : 25
+          }
+        },
+        "message" : {
+          "text" : "efivarfs_valid_name"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/efivarfs/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 12
+          },
+          "region" : {
+            "startLine" : 52,
+            "startColumn" : 24,
+            "endColumn" : 27
+          }
+        },
+        "message" : {
+          "text" : "len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ext4_find_dest_de](1)  passes an unsigned int to a function that requires a signed int: [ext4_find_dest_de](2). And then used in pointer arithmetic: [buf_size](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 2163,
+            "startColumn" : 9,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "bb87c8ea978ef0d5:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 2163,
+            "startColumn" : 9,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "call to ext4_find_dest_de"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 2076,
+            "startColumn" : 5,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "ext4_find_dest_de"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 2089,
+            "startColumn" : 14,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "buf_size"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ext4_search_dir](1)  passes an unsigned int to a function that requires a signed int: [ext4_search_dir](2). And then used in pointer arithmetic: [buf_size](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 1284,
+            "startColumn" : 9,
+            "endColumn" : 24
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "934766a91e0d99d6:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 1284,
+            "startColumn" : 9,
+            "endColumn" : 24
+          }
+        },
+        "message" : {
+          "text" : "call to ext4_search_dir"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 1510,
+            "startColumn" : 5,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "ext4_search_dir"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/namei.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 14
+          },
+          "region" : {
+            "startLine" : 1519,
+            "startColumn" : 24,
+            "endColumn" : 32
+          }
+        },
+        "message" : {
+          "text" : "buf_size"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to update_backups](1)  passes an unsigned int to a function that requires a signed int: [update_backups](2). And then used in pointer arithmetic: [size](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/resize.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 15
+          },
+          "region" : {
+            "startLine" : 1616,
+            "startColumn" : 4,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "e723d269d9d58df6:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/resize.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 15
+          },
+          "region" : {
+            "startLine" : 1616,
+            "startColumn" : 4,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to update_backups"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/resize.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 15
+          },
+          "region" : {
+            "startLine" : 1139,
+            "startColumn" : 13,
+            "endColumn" : 27
+          }
+        },
+        "message" : {
+          "text" : "update_backups"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/resize.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 15
+          },
+          "region" : {
+            "startLine" : 1199,
+            "startColumn" : 24,
+            "endColumn" : 28
+          }
+        },
+        "message" : {
+          "text" : "size"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ext4_expand_extra_isize_ea](1)  passes an unsigned int to a function that requires a signed int: [ext4_expand_extra_isize_ea](2). And then used in pointer arithmetic: [new_extra_isize](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 16
+          },
+          "region" : {
+            "startLine" : 5960,
+            "startColumn" : 10,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "a060bd1a1f692e4:1",
+        "primaryLocationStartColumnFingerprint" : "8"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/inode.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 16
+          },
+          "region" : {
+            "startLine" : 5960,
+            "startColumn" : 10,
+            "endColumn" : 36
+          }
+        },
+        "message" : {
+          "text" : "call to ext4_expand_extra_isize_ea"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/xattr.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 17
+          },
+          "region" : {
+            "startLine" : 2760,
+            "startColumn" : 5,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "ext4_expand_extra_isize_ea"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/ext4/xattr.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 17
+          },
+          "region" : {
+            "startLine" : 2851,
+            "startColumn" : 31,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "new_extra_isize"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to dentry_path](1)  passes an unsigned int to a function that requires a signed int: [dentry_path](2). And then used in pointer arithmetic: [buflen](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/seq_file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 18
+          },
+          "region" : {
+            "startLine" : 544,
+            "startColumn" : 13,
+            "endColumn" : 24
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "cee0d2e1f84204cb:1",
+        "primaryLocationStartColumnFingerprint" : "10"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/seq_file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 18
+          },
+          "region" : {
+            "startLine" : 544,
+            "startColumn" : 13,
+            "endColumn" : 24
+          }
+        },
+        "message" : {
+          "text" : "call to dentry_path"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 370,
+            "startColumn" : 7,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "dentry_path"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 372,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "buflen"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to __d_path](1)  passes an unsigned int to a function that requires a signed int: [__d_path](2). And then used in pointer arithmetic: [buflen](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/seq_file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 18
+          },
+          "region" : {
+            "startLine" : 517,
+            "startColumn" : 7,
+            "endColumn" : 15
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "a5c4dc481a66c76e:1",
+        "primaryLocationStartColumnFingerprint" : "4"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/seq_file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 18
+          },
+          "region" : {
+            "startLine" : 517,
+            "startColumn" : 7,
+            "endColumn" : 15
+          }
+        },
+        "message" : {
+          "text" : "call to __d_path"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 214,
+            "startColumn" : 7,
+            "endColumn" : 15
+          }
+        },
+        "message" : {
+          "text" : "__d_path"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 218,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "buflen"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to d_path](1)  passes an unsigned int to a function that requires a signed int: [d_path](2). And then used in pointer arithmetic: [buflen](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/seq_file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 18
+          },
+          "region" : {
+            "startLine" : 477,
+            "startColumn" : 13,
+            "endColumn" : 19
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "7c1aab35cadf90a7:1",
+        "primaryLocationStartColumnFingerprint" : "10"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/seq_file.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 18
+          },
+          "region" : {
+            "startLine" : 477,
+            "startColumn" : 13,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "call to d_path"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 264,
+            "startColumn" : 7,
+            "endColumn" : 13
+          }
+        },
+        "message" : {
+          "text" : "d_path"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 266,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "buflen"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to bpf_adj_branches](1)  passes an unsigned int to a function that requires a signed int: [bpf_adj_branches](2). And then used in pointer arithmetic: [end_old](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 525,
+            "startColumn" : 22,
+            "endColumn" : 38
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "15564a287f966ae7:1",
+        "primaryLocationStartColumnFingerprint" : "20"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 525,
+            "startColumn" : 22,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "call to bpf_adj_branches"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 388,
+            "startColumn" : 12,
+            "endColumn" : 28
+          }
+        },
+        "message" : {
+          "text" : "bpf_adj_branches"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 404,
+            "startColumn" : 26,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "end_old"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to bpf_adj_branches](1)  passes an unsigned int to a function that requires a signed int: [bpf_adj_branches](2). And then used in pointer arithmetic: [end_old](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 477,
+            "startColumn" : 13,
+            "endColumn" : 29
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "255c8d5ca2d263ed:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 477,
+            "startColumn" : 13,
+            "endColumn" : 29
+          }
+        },
+        "message" : {
+          "text" : "call to bpf_adj_branches"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 388,
+            "startColumn" : 12,
+            "endColumn" : 28
+          }
+        },
+        "message" : {
+          "text" : "bpf_adj_branches"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 404,
+            "startColumn" : 26,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "end_old"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to bpf_adj_branches](1)  passes an unsigned int to a function that requires a signed int: [bpf_adj_branches](2). And then used in pointer arithmetic: [end_old](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 509,
+            "startColumn" : 9,
+            "endColumn" : 25
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "130e439947c35655:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 509,
+            "startColumn" : 9,
+            "endColumn" : 25
+          }
+        },
+        "message" : {
+          "text" : "call to bpf_adj_branches"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 388,
+            "startColumn" : 12,
+            "endColumn" : 28
+          }
+        },
+        "message" : {
+          "text" : "bpf_adj_branches"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "kernel/bpf/core.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 20
+          },
+          "region" : {
+            "startLine" : 404,
+            "startColumn" : 26,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "end_old"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to d_path](1)  passes an unsigned int to a function that requires a signed int: [d_path](2). And then used in pointer arithmetic: [buflen](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/seq_buf.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 21
+          },
+          "region" : {
+            "startLine" : 279,
+            "startColumn" : 13,
+            "endColumn" : 19
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "7c1aab35cadf90a7:1",
+        "primaryLocationStartColumnFingerprint" : "10"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/seq_buf.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 21
+          },
+          "region" : {
+            "startLine" : 279,
+            "startColumn" : 13,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "call to d_path"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 264,
+            "startColumn" : 7,
+            "endColumn" : 13
+          }
+        },
+        "message" : {
+          "text" : "d_path"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "fs/d_path.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 19
+          },
+          "region" : {
+            "startLine" : 266,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "buflen"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopyDstBeforeSrc](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopyDstBeforeSrc](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1728,
+            "startColumn" : 21,
+            "endColumn" : 46
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "e57d4cb1128fb947:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1728,
+            "startColumn" : 21,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 832,
+            "startColumn" : 13,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 834,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopyDstBeforeSrc](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopyDstBeforeSrc](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1775,
+            "startColumn" : 21,
+            "endColumn" : 46
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "bd36c08dca06e3f8:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1775,
+            "startColumn" : 21,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 832,
+            "startColumn" : 13,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 834,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopyDstBeforeSrc](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopyDstBeforeSrc](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1445,
+            "startColumn" : 21,
+            "endColumn" : 46
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "e2cc8279eaae0ed9:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1445,
+            "startColumn" : 21,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 832,
+            "startColumn" : 13,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 834,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_wildcopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_wildcopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1085,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "33a5e1b771080171:2",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1085,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 208,
+            "startColumn" : 6,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 213,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_wildcopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_wildcopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1120,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "6aa9a1ddf4ceb02d:2",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1120,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 208,
+            "startColumn" : 6,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 213,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_wildcopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_wildcopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 993,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "33a5e1b771080171:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 993,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 208,
+            "startColumn" : 6,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 213,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_wildcopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_wildcopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1029,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "6aa9a1ddf4ceb02d:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 1029,
+            "startColumn" : 9,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 208,
+            "startColumn" : 6,
+            "endColumn" : 19
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_wildcopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/common/zstd_internal.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 23
+          },
+          "region" : {
+            "startLine" : 213,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopyDstBeforeSrc](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopyDstBeforeSrc](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 927,
+            "startColumn" : 5,
+            "endColumn" : 30
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "75ee4997a9d8b381:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 927,
+            "startColumn" : 5,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 832,
+            "startColumn" : 13,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopyDstBeforeSrc"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 834,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 948,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "214131e7181d82b5:2",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 948,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 792,
+            "startColumn" : 13,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 794,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 879,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "fa34b27a3c2b3f44:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 879,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 792,
+            "startColumn" : 13,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 794,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ZSTD_safecopy](1)  passes an unsigned int to a function that requires a signed int: [ZSTD_safecopy](2). And then used in pointer arithmetic: [length](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 900,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "214131e7181d82b5:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 900,
+            "startColumn" : 5,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to ZSTD_safecopy"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 792,
+            "startColumn" : 13,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "ZSTD_safecopy"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "lib/zstd/decompress/zstd_decompress_block.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 22
+          },
+          "region" : {
+            "startLine" : 794,
+            "startColumn" : 29,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "length"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xdp_prepare_buff](1)  passes an unsigned int to a function that requires a signed int: [xdp_prepare_buff](2). And then used in pointer arithmetic: [headroom](3)\nThis call: [call to xdp_prepare_buff](1)  passes an unsigned int to a function that requires a signed int: [xdp_prepare_buff](2). And then used in pointer arithmetic: [data_len](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/dev.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 24
+          },
+          "region" : {
+            "startLine" : 4740,
+            "startColumn" : 2,
+            "endColumn" : 18
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ba77073d01f21899:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/dev.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 24
+          },
+          "region" : {
+            "startLine" : 4740,
+            "startColumn" : 2,
+            "endColumn" : 18
+          }
+        },
+        "message" : {
+          "text" : "call to xdp_prepare_buff"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 126,
+            "endColumn" : 17
+          }
+        },
+        "message" : {
+          "text" : "xdp_prepare_buff"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 129,
+            "startColumn" : 37,
+            "endColumn" : 45
+          }
+        },
+        "message" : {
+          "text" : "headroom"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/xdp.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 11
+          },
+          "region" : {
+            "startLine" : 133,
+            "startColumn" : 25,
+            "endColumn" : 33
+          }
+        },
+        "message" : {
+          "text" : "data_len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to __skb_header_pointer](1)  passes an unsigned int to a function that requires a signed int: [__skb_header_pointer](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/flow_dissector.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 25
+          },
+          "region" : {
+            "startLine" : 1797,
+            "startColumn" : 10,
+            "endColumn" : 30
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "1697188ed0162561:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/flow_dissector.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 25
+          },
+          "region" : {
+            "startLine" : 1797,
+            "startColumn" : 10,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "call to __skb_header_pointer"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4013,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "__skb_header_pointer"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4017,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to netdev_queue_update_kobjects](1)  passes an unsigned int to a function that requires a signed int: [netdev_queue_update_kobjects](2). And then used in pointer arithmetic: [i](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/dev.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 24
+          },
+          "region" : {
+            "startLine" : 2879,
+            "startColumn" : 8,
+            "endColumn" : 36
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "c43fec6ee07da188:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/dev.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 24
+          },
+          "region" : {
+            "startLine" : 2879,
+            "startColumn" : 8,
+            "endColumn" : 36
+          }
+        },
+        "message" : {
+          "text" : "call to netdev_queue_update_kobjects"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/net-sysfs.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 27
+          },
+          "region" : {
+            "startLine" : 1732,
+            "endColumn" : 29
+          }
+        },
+        "message" : {
+          "text" : "netdev_queue_update_kobjects"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/net-sysfs.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 27
+          },
+          "region" : {
+            "startLine" : 1754,
+            "startColumn" : 43,
+            "endColumn" : 44
+          }
+        },
+        "message" : {
+          "text" : "i"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to __skb_header_pointer](1)  passes an unsigned int to a function that requires a signed int: [__skb_header_pointer](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/flow_dissector.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 25
+          },
+          "region" : {
+            "startLine" : 526,
+            "startColumn" : 12,
+            "endColumn" : 32
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5d456f4de4ed25d6:1",
+        "primaryLocationStartColumnFingerprint" : "10"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/flow_dissector.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 25
+          },
+          "region" : {
+            "startLine" : 526,
+            "startColumn" : 12,
+            "endColumn" : 32
+          }
+        },
+        "message" : {
+          "text" : "call to __skb_header_pointer"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4013,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "__skb_header_pointer"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4017,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_from_linear_data_offset](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_from_linear_data_offset](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 6377,
+            "startColumn" : 2,
+            "endColumn" : 34
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "66d50b9c645540db:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 6377,
+            "startColumn" : 2,
+            "endColumn" : 34
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4057,
+            "startColumn" : 20,
+            "endColumn" : 52
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4061,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_from_linear_data_offset](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_from_linear_data_offset](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4477,
+            "startColumn" : 3,
+            "endColumn" : 35
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "9615528ecd068205:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4477,
+            "startColumn" : 3,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4057,
+            "startColumn" : 20,
+            "endColumn" : 52
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4061,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_and_csum_bits](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_and_csum_bits](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4489,
+            "startColumn" : 6,
+            "endColumn" : 28
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "78d55d3ec3a306be:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4489,
+            "startColumn" : 6,
+            "endColumn" : 28
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3263,
+            "startColumn" : 8,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3276,
+            "startColumn" : 48,
+            "endColumn" : 54
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_from_linear_data_offset](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_from_linear_data_offset](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4504,
+            "startColumn" : 3,
+            "endColumn" : 35
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "6e3f7133d7197998:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4504,
+            "startColumn" : 3,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4057,
+            "startColumn" : 20,
+            "endColumn" : 52
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4061,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_from_linear_data_offset](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_from_linear_data_offset](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4253,
+            "startColumn" : 3,
+            "endColumn" : 35
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "30e49f0e6cb4df7a:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 4253,
+            "startColumn" : 3,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4057,
+            "startColumn" : 20,
+            "endColumn" : 52
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4061,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_from_linear_data_offset](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_from_linear_data_offset](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3735,
+            "startColumn" : 2,
+            "endColumn" : 34
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "39afb0996222b0bb:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3735,
+            "startColumn" : 2,
+            "endColumn" : 34
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4057,
+            "startColumn" : 20,
+            "endColumn" : 52
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_from_linear_data_offset"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/skbuff.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 26
+          },
+          "region" : {
+            "startLine" : 4061,
+            "startColumn" : 25,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ipv6_gro_complete](1)  passes an unsigned int to a function that requires a signed int: [ipv6_gro_complete](2). And then used in pointer arithmetic: [nhoff](3)\nThis call: [call to ipv6_gro_complete](1)  passes an unsigned int to a function that requires a signed int: [ipv6_gro_complete](2). And then used in pointer arithmetic: [nhoff](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ethernet/eth.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 29
+          },
+          "region" : {
+            "startLine" : 468,
+            "startColumn" : 9,
+            "endLine" : 469,
+            "endColumn" : 24
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "3939749318decc61:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ethernet/eth.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 29
+          },
+          "region" : {
+            "startLine" : 468,
+            "startColumn" : 9,
+            "endLine" : 469,
+            "endColumn" : 24
+          }
+        },
+        "message" : {
+          "text" : "call to ipv6_gro_complete"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_offload.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 30
+          },
+          "region" : {
+            "startLine" : 320,
+            "startColumn" : 29,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "ipv6_gro_complete"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_offload.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 30
+          },
+          "region" : {
+            "startLine" : 344,
+            "startColumn" : 40,
+            "endColumn" : 45
+          }
+        },
+        "message" : {
+          "text" : "nhoff"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_offload.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 30
+          },
+          "region" : {
+            "startLine" : 357,
+            "startColumn" : 40,
+            "endColumn" : 45
+          }
+        },
+        "message" : {
+          "text" : "nhoff"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to inet_gro_complete](1)  passes an unsigned int to a function that requires a signed int: [inet_gro_complete](2). And then used in pointer arithmetic: [nhoff](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ethernet/eth.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 29
+          },
+          "region" : {
+            "startLine" : 469,
+            "startColumn" : 26,
+            "endColumn" : 43
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "ed3a929f835903df:1",
+        "primaryLocationStartColumnFingerprint" : "19"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ethernet/eth.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 29
+          },
+          "region" : {
+            "startLine" : 469,
+            "startColumn" : 26,
+            "endColumn" : 43
+          }
+        },
+        "message" : {
+          "text" : "call to inet_gro_complete"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/af_inet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 31
+          },
+          "region" : {
+            "startLine" : 1618,
+            "startColumn" : 5,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "inet_gro_complete"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/af_inet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 31
+          },
+          "region" : {
+            "startLine" : 1620,
+            "startColumn" : 51,
+            "endColumn" : 56
+          }
+        },
+        "message" : {
+          "text" : "nhoff"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to udp4_gro_complete](1)  passes an unsigned int to a function that requires a signed int: [udp4_gro_complete](2). And then used in pointer arithmetic: [nhoff](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/af_inet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 31
+          },
+          "region" : {
+            "startLine" : 1643,
+            "startColumn" : 29,
+            "endColumn" : 46
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "c0c8d472f7be7d66:1",
+        "primaryLocationStartColumnFingerprint" : "19"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/af_inet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 31
+          },
+          "region" : {
+            "startLine" : 1643,
+            "startColumn" : 29,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "call to udp4_gro_complete"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/udp_offload.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 32
+          },
+          "region" : {
+            "startLine" : 700,
+            "startColumn" : 29,
+            "endColumn" : 46
+          }
+        },
+        "message" : {
+          "text" : "udp4_gro_complete"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/udp_offload.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 32
+          },
+          "region" : {
+            "startLine" : 703,
+            "startColumn" : 52,
+            "endColumn" : 57
+          }
+        },
+        "message" : {
+          "text" : "nhoff"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_and_csum_bits](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_and_csum_bits](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/ip_output.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 33
+          },
+          "region" : {
+            "startLine" : 1433,
+            "startColumn" : 17,
+            "endColumn" : 39
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "e61d8d224145c23a:1",
+        "primaryLocationStartColumnFingerprint" : "12"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/ip_output.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 33
+          },
+          "region" : {
+            "startLine" : 1433,
+            "startColumn" : 17,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3263,
+            "startColumn" : 8,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3276,
+            "startColumn" : 48,
+            "endColumn" : 54
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_and_csum_bits](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_and_csum_bits](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/ip_output.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 33
+          },
+          "region" : {
+            "startLine" : 1151,
+            "startColumn" : 17,
+            "endColumn" : 39
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "c2ea84fb9d573230:1",
+        "primaryLocationStartColumnFingerprint" : "12"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/ip_output.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 33
+          },
+          "region" : {
+            "startLine" : 1151,
+            "startColumn" : 17,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3263,
+            "startColumn" : 8,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3276,
+            "startColumn" : 48,
+            "endColumn" : 54
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to pskb_expand_head](1)  passes an unsigned int to a function that requires a signed int: [pskb_expand_head](2). And then used in pointer arithmetic: [nhead](3)\nThis call: [call to pskb_expand_head](1)  passes an unsigned int to a function that requires a signed int: [pskb_expand_head](2). And then used in pointer arithmetic: [nhead](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/netfilter.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 34
+          },
+          "region" : {
+            "startLine" : 78,
+            "startColumn" : 6,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "4b4515cd1a1682a2:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/netfilter.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 34
+          },
+          "region" : {
+            "startLine" : 78,
+            "startColumn" : 6,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to pskb_expand_head"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 1975,
+            "startColumn" : 5,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "pskb_expand_head"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 2001,
+            "startColumn" : 16,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "nhead"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 2027,
+            "startColumn" : 16,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "nhead"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_to_page_nocache](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_to_page_nocache](2). And then used in pointer arithmetic: [off](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/tcp.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 35
+          },
+          "region" : {
+            "startLine" : 1377,
+            "startColumn" : 10,
+            "endColumn" : 34
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "59708ebeeeafe0ff:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv4/tcp.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 35
+          },
+          "region" : {
+            "startLine" : 1377,
+            "startColumn" : 10,
+            "endColumn" : 34
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_to_page_nocache"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/sock.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 36
+          },
+          "region" : {
+            "startLine" : 2264,
+            "startColumn" : 19,
+            "endColumn" : 43
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_to_page_nocache"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/sock.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 36
+          },
+          "region" : {
+            "startLine" : 2271,
+            "startColumn" : 69,
+            "endColumn" : 72
+          }
+        },
+        "message" : {
+          "text" : "off"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ipv6_clear_mutable_options](1)  passes an unsigned int to a function that requires a signed int: [ipv6_clear_mutable_options](2). And then used in pointer arithmetic: [len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 588,
+            "startColumn" : 8,
+            "endColumn" : 34
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "8b5a568f7d86d3d1:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 588,
+            "startColumn" : 8,
+            "endColumn" : 34
+          }
+        },
+        "message" : {
+          "text" : "call to ipv6_clear_mutable_options"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 241,
+            "startColumn" : 12,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "ipv6_clear_mutable_options"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 249,
+            "startColumn" : 27,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ipv6_clear_mutable_options](1)  passes an unsigned int to a function that requires a signed int: [ipv6_clear_mutable_options](2). And then used in pointer arithmetic: [len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 390,
+            "startColumn" : 9,
+            "endColumn" : 35
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "7f5c1b47bd49318f:1",
+        "primaryLocationStartColumnFingerprint" : "6"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 390,
+            "startColumn" : 9,
+            "endColumn" : 35
+          }
+        },
+        "message" : {
+          "text" : "call to ipv6_clear_mutable_options"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 241,
+            "startColumn" : 12,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "ipv6_clear_mutable_options"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ah6.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 37
+          },
+          "region" : {
+            "startLine" : 249,
+            "startColumn" : 27,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to ipv6_is_mld](1)  passes an unsigned int to a function that requires a signed int: [ipv6_is_mld](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_input.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 38
+          },
+          "region" : {
+            "startLine" : 428,
+            "startColumn" : 9,
+            "endColumn" : 20
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "80296d2e4a205cd6:1",
+        "primaryLocationStartColumnFingerprint" : "1"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_input.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 38
+          },
+          "region" : {
+            "startLine" : 428,
+            "startColumn" : 9,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "call to ipv6_is_mld"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/addrconf.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 39
+          },
+          "region" : {
+            "startLine" : 249,
+            "startColumn" : 20,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "ipv6_is_mld"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/addrconf.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 39
+          },
+          "region" : {
+            "startLine" : 257,
+            "startColumn" : 54,
+            "endColumn" : 60
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_and_csum_bits](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_and_csum_bits](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_output.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 40
+          },
+          "region" : {
+            "startLine" : 1723,
+            "startColumn" : 17,
+            "endColumn" : 39
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "c2ea84fb9d573230:1",
+        "primaryLocationStartColumnFingerprint" : "12"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/ip6_output.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 40
+          },
+          "region" : {
+            "startLine" : 1723,
+            "startColumn" : 17,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3263,
+            "startColumn" : 8,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3276,
+            "startColumn" : 48,
+            "endColumn" : 54
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to pskb_expand_head](1)  passes an unsigned int to a function that requires a signed int: [pskb_expand_head](2). And then used in pointer arithmetic: [nhead](3)\nThis call: [call to pskb_expand_head](1)  passes an unsigned int to a function that requires a signed int: [pskb_expand_head](2). And then used in pointer arithmetic: [nhead](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/netfilter.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 41
+          },
+          "region" : {
+            "startLine" : 76,
+            "startColumn" : 6,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "4b4515cd1a1682a2:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/ipv6/netfilter.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 41
+          },
+          "region" : {
+            "startLine" : 76,
+            "startColumn" : 6,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to pskb_expand_head"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 1975,
+            "startColumn" : 5,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "pskb_expand_head"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 2001,
+            "startColumn" : 16,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "nhead"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 2027,
+            "startColumn" : 16,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "nhead"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to __skb_checksum](1)  passes an unsigned int to a function that requires a signed int: [__skb_checksum](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/sctp/checksum.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 42
+          },
+          "region" : {
+            "startLine" : 59,
+            "startColumn" : 9,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "6ba043c36726caa1:1",
+        "primaryLocationStartColumnFingerprint" : "7"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/net/sctp/checksum.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 42
+          },
+          "region" : {
+            "startLine" : 59,
+            "startColumn" : 9,
+            "endColumn" : 23
+          }
+        },
+        "message" : {
+          "text" : "call to __skb_checksum"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3165,
+            "startColumn" : 8,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "__skb_checksum"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3178,
+            "startColumn" : 24,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to pskb_expand_head](1)  passes an unsigned int to a function that requires a signed int: [pskb_expand_head](2). And then used in pointer arithmetic: [nhead](3)\nThis call: [call to pskb_expand_head](1)  passes an unsigned int to a function that requires a signed int: [pskb_expand_head](2). And then used in pointer arithmetic: [nhead](4)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/nf_nat_proto.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 43
+          },
+          "region" : {
+            "startLine" : 694,
+            "startColumn" : 6,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "3dbcbf650c4d0344:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/nf_nat_proto.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 43
+          },
+          "region" : {
+            "startLine" : 694,
+            "startColumn" : 6,
+            "endColumn" : 22
+          }
+        },
+        "message" : {
+          "text" : "call to pskb_expand_head"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 1975,
+            "startColumn" : 5,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "pskb_expand_head"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 2001,
+            "startColumn" : 16,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "nhead"
+        }
+      }, {
+        "id" : 4,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 2027,
+            "startColumn" : 16,
+            "endColumn" : 21
+          }
+        },
+        "message" : {
+          "text" : "nhead"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xt_data_to_user](1)  passes an unsigned int to a function that requires a signed int: [xt_data_to_user](2). And then used in pointer arithmetic: [usersize](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 1173,
+            "startColumn" : 7,
+            "endColumn" : 65
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "a7c58408ee8a7f65:1",
+        "primaryLocationStartColumnFingerprint" : "4"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 1173,
+            "startColumn" : 7,
+            "endColumn" : 65
+          }
+        },
+        "message" : {
+          "text" : "call to xt_data_to_user"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 312,
+            "startColumn" : 5,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "xt_data_to_user"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 319,
+            "startColumn" : 23,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "usersize"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xt_data_to_user](1)  passes an unsigned int to a function that requires a signed int: [xt_data_to_user](2). And then used in pointer arithmetic: [usersize](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 799,
+            "startColumn" : 7,
+            "endColumn" : 64
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "213261b090a45e8a:1",
+        "primaryLocationStartColumnFingerprint" : "4"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 799,
+            "startColumn" : 7,
+            "endColumn" : 64
+          }
+        },
+        "message" : {
+          "text" : "call to xt_data_to_user"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 312,
+            "startColumn" : 5,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "xt_data_to_user"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 319,
+            "startColumn" : 23,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "usersize"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xt_data_to_user](1)  passes an unsigned int to a function that requires a signed int: [xt_data_to_user](2). And then used in pointer arithmetic: [usersize](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 344,
+            "startColumn" : 9,
+            "endColumn" : 38
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "13433ae2ea1eefd0:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 344,
+            "startColumn" : 9,
+            "endColumn" : 38
+          }
+        },
+        "message" : {
+          "text" : "call to xt_data_to_user"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 312,
+            "startColumn" : 5,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "xt_data_to_user"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 319,
+            "startColumn" : 23,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "usersize"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to xt_data_to_user](1)  passes an unsigned int to a function that requires a signed int: [xt_data_to_user](2). And then used in pointer arithmetic: [usersize](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 336,
+            "startColumn" : 9,
+            "endColumn" : 37
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5840b818ab504bb3:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 336,
+            "startColumn" : 9,
+            "endColumn" : 37
+          }
+        },
+        "message" : {
+          "text" : "call to xt_data_to_user"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 312,
+            "startColumn" : 5,
+            "endColumn" : 20
+          }
+        },
+        "message" : {
+          "text" : "xt_data_to_user"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/netfilter/x_tables.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 44
+          },
+          "region" : {
+            "startLine" : 319,
+            "startColumn" : 23,
+            "endColumn" : 31
+          }
+        },
+        "message" : {
+          "text" : "usersize"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to dev_validate_header](1)  passes an unsigned int to a function that requires a signed int: [dev_validate_header](2). And then used in pointer arithmetic: [len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/packet/af_packet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 45
+          },
+          "region" : {
+            "startLine" : 3041,
+            "startColumn" : 8,
+            "endColumn" : 27
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "11a04812fd896962:1",
+        "primaryLocationStartColumnFingerprint" : "1"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/packet/af_packet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 45
+          },
+          "region" : {
+            "startLine" : 3041,
+            "startColumn" : 8,
+            "endColumn" : 27
+          }
+        },
+        "message" : {
+          "text" : "call to dev_validate_header"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/netdevice.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 46
+          },
+          "region" : {
+            "startLine" : 3129,
+            "startColumn" : 20,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "dev_validate_header"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/netdevice.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 46
+          },
+          "region" : {
+            "startLine" : 3138,
+            "startColumn" : 22,
+            "endColumn" : 25
+          }
+        },
+        "message" : {
+          "text" : "len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to dev_validate_header](1)  passes an unsigned int to a function that requires a signed int: [dev_validate_header](2). And then used in pointer arithmetic: [len](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/packet/af_packet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 45
+          },
+          "region" : {
+            "startLine" : 2036,
+            "startColumn" : 7,
+            "endColumn" : 26
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "91abcf7386238643:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/packet/af_packet.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 45
+          },
+          "region" : {
+            "startLine" : 2036,
+            "startColumn" : 7,
+            "endColumn" : 26
+          }
+        },
+        "message" : {
+          "text" : "call to dev_validate_header"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/netdevice.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 46
+          },
+          "region" : {
+            "startLine" : 3129,
+            "startColumn" : 20,
+            "endColumn" : 39
+          }
+        },
+        "message" : {
+          "text" : "dev_validate_header"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "include/linux/netdevice.h",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 46
+          },
+          "region" : {
+            "startLine" : 3138,
+            "startColumn" : 22,
+            "endColumn" : 25
+          }
+        },
+        "message" : {
+          "text" : "len"
+        }
+      } ]
+    }, {
+      "ruleId" : "cpp/sign-conversion-pointer-arithmetic",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/sign-conversion-pointer-arithmetic",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "This call: [call to skb_copy_and_csum_bits](1)  passes an unsigned int to a function that requires a signed int: [skb_copy_and_csum_bits](2). And then used in pointer arithmetic: [offset](3)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/sunrpc/socklib.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 47
+          },
+          "region" : {
+            "startLine" : 74,
+            "startColumn" : 10,
+            "endColumn" : 32
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "b6ee5246aa135c1e:1",
+        "primaryLocationStartColumnFingerprint" : "8"
+      },
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/sunrpc/socklib.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 47
+          },
+          "region" : {
+            "startLine" : 74,
+            "startColumn" : 10,
+            "endColumn" : 32
+          }
+        },
+        "message" : {
+          "text" : "call to skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 2,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3263,
+            "startColumn" : 8,
+            "endColumn" : 30
+          }
+        },
+        "message" : {
+          "text" : "skb_copy_and_csum_bits"
+        }
+      }, {
+        "id" : 3,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "net/core/skbuff.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 28
+          },
+          "region" : {
+            "startLine" : 3276,
+            "startColumn" : 48,
+            "endColumn" : 54
+          }
+        },
+        "message" : {
+          "text" : "offset"
+        }
+      } ]
+    } ],
+    "columnKind" : "utf16CodeUnits",
+    "properties" : {
+      "semmle.formatSpecifier" : "sarifv2.1.0"
+    }
+  } ]
+}
