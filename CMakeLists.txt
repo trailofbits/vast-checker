@@ -1,3 +1,11 @@
+#
+# Copyright (c) 2023, Trail of Bits, Inc.
+# All rights reserved.
+#
+# This source code is licensed in accordance with the terms specified in
+# the LICENSE file found in the root directory of this source tree.
+#
+
 cmake_minimum_required(VERSION 3.14)
 
 include(cmake/prelude.cmake)
@@ -12,6 +20,10 @@ project(
 
 include(cmake/project-is-top-level.cmake)
 include(cmake/variables.cmake)
+
+# ---- Add external project ----
+
+add_subdirectory(external)
 
 # ---- Declare library ----
 
