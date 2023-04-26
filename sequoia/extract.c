@@ -27,9 +27,11 @@ static inline bool __must_check IS_ERR(__force const void *ptr)
  * tools/bootconfig/include/linux/bootconfig.h
  */
 
-#define WARN_ON(cond)	\
-	((cond) ? printf("Internal warning(%s:%d, %s): %s\n",	\
-			__FILE__, __LINE__, __func__, #cond) : 0)
+// #define WARN_ON(cond)	\
+// 	((cond) ? printf("Internal warning(%s:%d, %s): %s\n",	\
+// 			__FILE__, __LINE__, __func__, #cond) : 0)
+
+#define WARN_ON(cond) (cond)
 
 #define unlikely(cond)	(cond)
 
