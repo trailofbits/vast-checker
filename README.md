@@ -2,13 +2,35 @@
 
 This is the vast-checker project.
 
-# Building
+# Building on Ubuntu 22.04
 
 ```sh
-cmake -S . -B build --toolchain ./external/vast/cmake/lld.toolchain.cmake \
-                    -D CMAKE_BUILD_TYPE=Release \
-                    -D CMAKE_PREFIX_PATH=/usr/lib/llvm-15
-cmake --build build
+sudo apt-get update && sudo apt-get install -y --no-install-recommends \
+  clang-15 \
+  clang-tools-15 \
+  libclang-common-15-dev \
+  libclang-15-dev \
+  llvm-15 \
+  llvm-15-dev \
+  libllvm15 \
+  libmlir-15-dev \
+  mlir-15-tools
+```
+
+```sh
+git clone --recursive https://github.com/trailofbits/vast-checker.git
+```
+
+```sh
+cmake -S vast-checker -B build --toolchain ./external/vast/cmake/lld.toolchain.cmake \
+                      -D CMAKE_BUILD_TYPE=Release \
+                      -D CMAKE_PREFIX_PATH=/usr/lib/llvm-15 \
+                      -D CMAKE_C_COMPILER=clang-15 \
+                      -D CMAKE_CXX_COMPILER=clang++-15
+```
+
+```sh
+cmake --build build -j$(nproc)
 ```
 
 # Contributing
