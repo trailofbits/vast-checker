@@ -36,7 +36,7 @@ message(STATUS "Using MLIRConfig.cmake in: ${MLIR_DIR}")
 
 # ---- Declare library ----
 
-add_library(vast-checker_lib OBJECT source/lib.cpp)
+add_library(vast-checker_lib OBJECT source/sequoia_checker.cpp)
 
 target_include_directories(
   vast-checker_lib ${warning_guard}
