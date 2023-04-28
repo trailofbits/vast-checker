@@ -74,7 +74,9 @@ struct sequoia_checker_pass
     }
 
     if (auto add = mlir::dyn_cast<AddIOp>(opr)) {
-      if (add.getLhs().getType().isa<PointerType>() || add.getRhs()) {
+      if (add.getLhs().getType().isa<PointerType>()
+          || add.getRhs().getType().isa<PointerType>())
+      {
         return true;
       }
     }
