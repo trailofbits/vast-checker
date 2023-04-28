@@ -33,6 +33,17 @@ cmake -S vast-checker -B build --toolchain ./external/vast/cmake/lld.toolchain.c
 cmake --build build -j$(nproc)
 ```
 
+# Usage
+
+```sh
+./build/external/vast/tools/vast-front/vast-front -vast-emit-mlir=hl vast-checker/sequoia/extract.c -o extract.hl.mlir
+```
+
+```sh
+./build/vast-checker -sequoia extract.hl.mlir > /dev/null
+
+```
+
 # Contributing
 
 See the [CONTRIBUTING](CONTRIBUTING.md) document.
