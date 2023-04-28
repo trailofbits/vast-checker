@@ -1,0 +1,3 @@
+[submodule "external/vast"]
+	path = external/vast
+	url = https://github.com/trailofbits/vast.git
