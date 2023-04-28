@@ -2,9 +2,14 @@
 
 This is the vast-checker project.
 
-# Building and installing
+# Building
 
-See the [BUILDING](BUILDING.md) document.
+```sh
+cmake -S . -B build --toolchain ./external/vast/cmake/lld.toolchain.cmake \
+                    -D CMAKE_BUILD_TYPE=Release \
+                    -D CMAKE_PREFIX_PATH=/usr/lib/llvm-15
+cmake --build build
+```
 
 # Contributing
 
