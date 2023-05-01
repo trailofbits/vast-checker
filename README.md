@@ -14,7 +14,8 @@ sudo apt-get update && sudo apt-get install -y --no-install-recommends \
   llvm-15-dev \
   libllvm15 \
   libmlir-15-dev \
-  mlir-15-tools
+  mlir-15-tools \
+  lld-15
 ```
 
 ```sh
