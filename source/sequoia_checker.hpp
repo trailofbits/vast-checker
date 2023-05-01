@@ -12,7 +12,7 @@
 #include <vast/Dialect/HighLevel/HighLevelOps.hpp>
 #include <vast/Dialect/HighLevel/HighLevelTypes.hpp>
 
-#include "mlir/Interfaces/CallInterfaces.h"
+#include "mlir/IR/Operation.h"
 
 /**
  * @brief Pass that checks for the sequoia bug in VAST `hl` dialect code.
@@ -66,7 +66,34 @@ struct sequoia_checker_pass
 
     return llvm::TypeSwitch<mlir::Operation*, bool>(opr)
         .Case<ImplicitCastOp, CStyleCastOp>(check_cast)
-        .Default([](mlir::Operation*) { return false; });
+        .Default(/*defaultResult=*/false);
+  }
+
+  /**
+   * @brief Checks if `opr` has a pointer type operand.
+   */
+  static auto has_ptr_operand(mlir::Operation* opr) -> bool
+  {
+    using vast::hl::PointerType;
+
+    auto is_ptr_type = [](mlir::Value val) -> bool
+    { return val.getType().isa<PointerType>(); };
+
+    return llvm::any_of(opr->getOperands(), is_ptr_type);
+  }
+
+  /**
+   * @brief Checks if `opr` is an arithmetic operation. List of operations
+   * checked against is not exhaustive.
+   */
+  static auto is_arith_op(mlir::Operation* opr) -> bool
+  {
+    using vast::hl::AddIOp;
+    using vast::hl::SubIOp;
+
+    return llvm::TypeSwitch<mlir::Operation*, bool>(opr)
+        .Case<AddIOp, SubIOp>([](mlir::Operation*) { return true; })
+        .Default(/*defaultResult=*/false);
   }
 
   /**
@@ -75,19 +102,12 @@ struct sequoia_checker_pass
    */
   static auto has_ptr_arith_use(mlir::Operation* opr) -> bool
   {
-    using vast::hl::AddIOp;
-    using vast::hl::PointerType;
-
     if (opr == nullptr) {
       return false;
     }
 
-    if (auto add = mlir::dyn_cast<AddIOp>(opr)) {
-      if (add.getLhs().getType().isa<PointerType>()
-          || add.getRhs().getType().isa<PointerType>())
-      {
-        return true;
-      }
+    if (is_arith_op(opr) && has_ptr_operand(opr)) {
+      return true;
     }
 
     return llvm::any_of(opr->getUsers(), has_ptr_arith_use);
