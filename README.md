@@ -37,7 +37,10 @@ cmake --build build -j$(nproc)
 # Usage
 
 ```sh
-./build/external/vast/tools/vast-front/vast-front -vast-emit-mlir=hl vast-checker/sequoia/extract.c -o extract.hl.mlir
+./build/external/vast/tools/vast-front/vast-front \
+                      -vast-emit-mlir=hl \
+                      -o extract.hl.mlir \
+                      vast-checker/sequoia/extract.c
 ```
 
 ```sh
