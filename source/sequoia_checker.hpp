@@ -12,26 +12,31 @@
 #include <vast/Dialect/HighLevel/HighLevelOps.hpp>
 #include <vast/Dialect/HighLevel/HighLevelTypes.hpp>
 
+#include "mlir/Interfaces/CallInterfaces.h"
+
 /**
- * @brief Pass that checks for the sequoia bug in VAST `hl` dialect code
+ * @brief Pass that checks for the sequoia bug in VAST `hl` dialect code.
  */
 struct sequoia_checker_pass
     : public mlir::PassWrapper<sequoia_checker_pass,
                                mlir::OperationPass<vast::hl::FuncOp>>
 {
   /**
-   * @brief CLI argument
+   * @brief CLI argument.
    */
   auto getArgument() const -> llvm::StringRef final { return "sequoia"; }
 
   /**
-   * @brief CLI Description
+   * @brief CLI Description.
    */
   auto getDescription() const -> llvm::StringRef final
   {
     return "Checks for the sequoia bug in VAST `hl` dialect code";
   }
 
+  /**
+   * @brief Checks if `opr` is an unsigned-to-signed integer cast.
+   */
   auto is_unsigned_to_signed_cast(mlir::Operation* opr) -> bool
   {
     using vast::vast_module;
@@ -52,7 +57,7 @@ struct sequoia_checker_pass
         auto from_ty = cast.getValue().getType();
         if (auto typedef_ty = from_ty.template dyn_cast<TypedefType>()) {
           auto mod = mlir::cast<vast_module>(getOperation()->getParentOp());
-          from_ty = getBottomTypedefType(typedef_ty, mod);
+          from_ty  = getBottomTypedefType(typedef_ty, mod);
         }
         return isUnsigned(from_ty) && isSigned(cast.getType());
       }
@@ -64,6 +69,10 @@ struct sequoia_checker_pass
         .Default([](mlir::Operation*) { return false; });
   }
 
+  /**
+   * @brief Walks the use-def chain of `opr` and checks if any value on the
+   * chain is involved in pointer arithmetic.
+   */
   static auto has_ptr_arith_use(mlir::Operation* opr) -> bool
   {
     using vast::hl::AddIOp;
@@ -84,11 +93,15 @@ struct sequoia_checker_pass
     return llvm::any_of(opr->getUsers(), has_ptr_arith_use);
   }
 
-  static auto get_function(mlir::CallInterfaceCallable callee,
-                           vast::vast_module mod) -> vast::hl::FuncOp
+  /**
+   * @brief Get callee `vast::hl::FuncOp` from `vast::hl::CallOp`.
+   */
+  static auto get_callee(vast::hl::CallOp call, vast::vast_module mod)
+      -> vast::hl::FuncOp
   {
     using vast::hl::FuncOp;
 
+    auto callee = call.getCallableForCallee();
     if (auto sym = callee.dyn_cast<mlir::SymbolRefAttr>()) {
       return mlir::dyn_cast_or_null<FuncOp>(
           mlir::SymbolTable::lookupSymbolIn(mod, sym));
@@ -98,7 +111,7 @@ struct sequoia_checker_pass
   }
 
   /**
-   * @brief Pass entry point
+   * @brief Pass entry point.
    */
   void runOnOperation() override
   {
@@ -112,9 +125,9 @@ struct sequoia_checker_pass
     {
       for (const auto& arg : llvm::enumerate(call.getArgOperands())) {
         if (is_unsigned_to_signed_cast(arg.value().getDefiningOp())) {
-          auto mod = mlir::cast<vast_module>(getOperation()->getParentOp());
-          auto callee = get_function(call.getCallableForCallee(), mod);
-          auto param = callee.getArgument(arg.index());
+          auto mod    = mlir::cast<vast_module>(getOperation()->getParentOp());
+          auto callee = get_callee(call, mod);
+          auto param  = callee.getArgument(arg.index());
           if (llvm::any_of(param.getUsers(), has_ptr_arith_use)) {
             llvm::errs()
                 << "Call to `" << callee.getSymName() << "` in `"
