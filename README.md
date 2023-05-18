@@ -1,10 +1,13 @@
 # vast-checker
 
-vast-checker is a VAST-based tool that scans C code for variants of the sequoia
-bug. It is intended to be run after translating C code to VAST's `hl` MLIR
-dialect via the `vast-front` tool that ships with VAST. The main purpose of
-`vast-checker` is to demonstrate the capabilities of VAST and MLIR in bug
-hunting and program analysis use cases.
+VAST-checker is a [VAST](https://github.com/trailofbits/vast)-based tool that
+scans C code for variants of the
+[Sequoia](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33909) bug. It
+is intended to be run after translating C code to
+[](https://github.com/trailofbits/vast/blob/master/docs/HighLevel/HighLevel.md)VAST's
+`hl` MLIR dialect via the `vast-front` tool that ships with VAST. The main
+purpose of `vast-checker` is to demonstrate the capabilities of VAST and MLIR in
+bug hunting and program analysis use cases.
 
 # Building on Ubuntu 22.04
 
