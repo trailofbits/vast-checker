@@ -12,17 +12,21 @@ bug hunting and program analysis use cases.
 # Building on Ubuntu 22.04
 
 ```sh
+
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+sudo add-apt-repository 'deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-16 main'
+
 sudo apt-get update && sudo apt-get install -y --no-install-recommends \
-  clang-15 \
-  clang-tools-15 \
-  libclang-common-15-dev \
-  libclang-15-dev \
-  llvm-15 \
-  llvm-15-dev \
-  libllvm15 \
-  libmlir-15-dev \
-  mlir-15-tools \
-  lld-15
+  clang-16 \
+  clang-tools-16 \
+  libclang-common-16-dev \
+  libclang-16-dev \
+  llvm-16 \
+  llvm-16-dev \
+  libllvm16 \
+  libmlir-16-dev \
+  mlir-16-tools \
+  lld-16
 ```
 
 ```sh
@@ -32,9 +36,9 @@ git clone --recursive https://github.com/trailofbits/vast-checker.git
 ```sh
 cmake -S vast-checker -B build --toolchain ./external/vast/cmake/lld.toolchain.cmake \
                       -D CMAKE_BUILD_TYPE=Release \
-                      -D CMAKE_PREFIX_PATH=/usr/lib/llvm-15 \
-                      -D CMAKE_C_COMPILER=clang-15 \
-                      -D CMAKE_CXX_COMPILER=clang++-15
+                      -D CMAKE_PREFIX_PATH=/usr/lib/llvm-16 \
+                      -D CMAKE_C_COMPILER=clang-16 \
+                      -D CMAKE_CXX_COMPILER=clang++-16
 ```
 
 ```sh

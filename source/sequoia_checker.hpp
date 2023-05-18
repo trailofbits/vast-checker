@@ -47,6 +47,7 @@ struct sequoia_checker_pass
 
     using vast::hl::TypedefType;
 
+    using vast::hl::strip_elaborated;
     using vast::hl::getBottomTypedefType;
     using vast::hl::isSigned;
     using vast::hl::isUnsigned;
@@ -54,7 +55,7 @@ struct sequoia_checker_pass
     auto check_cast = [&](auto cast) -> bool
     {
       if (cast.getKind() == CastKind::IntegralCast) {
-        auto from_ty = cast.getValue().getType();
+        auto from_ty = strip_elaborated(cast.getValue().getType());
         if (auto typedef_ty = from_ty.template dyn_cast<TypedefType>()) {
           auto mod = mlir::cast<vast_module>(getOperation()->getParentOp());
           from_ty  = getBottomTypedefType(typedef_ty, mod);
