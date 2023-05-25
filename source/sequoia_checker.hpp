@@ -47,10 +47,10 @@ struct sequoia_checker_pass
 
     using vast::hl::TypedefType;
 
-    using vast::hl::strip_elaborated;
     using vast::hl::getBottomTypedefType;
     using vast::hl::isSigned;
     using vast::hl::isUnsigned;
+    using vast::hl::strip_elaborated;
 
     auto check_cast = [&](auto cast) -> bool
     {
@@ -115,23 +115,6 @@ struct sequoia_checker_pass
   }
 
   /**
-   * @brief Get callee `vast::hl::FuncOp` from `vast::hl::CallOp`.
-   */
-  static auto get_callee(vast::hl::CallOp call, vast::vast_module mod)
-      -> vast::hl::FuncOp
-  {
-    using vast::hl::FuncOp;
-
-    auto callee = call.getCallableForCallee();
-    if (auto sym = callee.dyn_cast<mlir::SymbolRefAttr>()) {
-      return mlir::dyn_cast_or_null<FuncOp>(
-          mlir::SymbolTable::lookupSymbolIn(mod, sym));
-    }
-
-    return {};
-  }
-
-  /**
    * @brief Pass entry point.
    */
   void runOnOperation() override
@@ -140,14 +123,15 @@ struct sequoia_checker_pass
 
     using vast::hl::CallOp;
 
+    using vast::hl::getCallee;
+
     auto fop = getOperation();
 
     auto check_for_sequoia = [&](CallOp call)
     {
       for (const auto& arg : llvm::enumerate(call.getArgOperands())) {
         if (is_unsigned_to_signed_cast(arg.value().getDefiningOp())) {
-          auto mod    = mlir::cast<vast_module>(getOperation()->getParentOp());
-          auto callee = get_callee(call, mod);
+          auto callee = getCallee(call);
           auto param  = callee.getArgument(arg.index());
           if (llvm::any_of(param.getUsers(), has_ptr_arith_use)) {
             llvm::errs()
