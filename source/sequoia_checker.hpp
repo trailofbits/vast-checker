@@ -8,11 +8,11 @@
 
 #pragma once
 
+#include <vector>
+
 #include <mlir/Pass/Pass.h>
 #include <vast/Dialect/HighLevel/HighLevelOps.hpp>
 #include <vast/Dialect/HighLevel/HighLevelTypes.hpp>
-
-#include "mlir/IR/Operation.h"
 
 /**
  * @brief Pass that checks for the sequoia bug in VAST `hl` dialect code.
@@ -98,21 +98,38 @@ struct sequoia_checker_pass
   }
 
   /**
-   * @brief Walks the use-def chain of `opr` and checks if any value on the
+   * @brief Walks the use-def chain of `val` and returns first value on the
    * chain is involved in pointer arithmetic.
    */
-  static auto has_ptr_arith_use(mlir::Operation* opr) -> bool
+  static auto get_ptr_arith_use(mlir::Value val) -> mlir::Operation*
   {
-    if (opr == nullptr) {
-      return false;
+    using op_vec = llvm::SmallVector<mlir::Operation*, 32>;
+
+    op_vec work_list(val.user_begin(), val.user_end());
+
+    while (!work_list.empty()) {
+      auto* opr = work_list.front();
+      work_list.erase(work_list.begin());
+
+      if (opr == nullptr) {
+        continue;
+      }
+
+      if (is_arith_op(opr) && has_ptr_operand(opr)) {
+        return opr;
+      }
+
+      work_list.append(opr->user_begin(), opr->user_end());
     }
 
-    if (is_arith_op(opr) && has_ptr_operand(opr)) {
-      return true;
-    }
-
-    return llvm::any_of(opr->getUsers(), has_ptr_arith_use);
+    return nullptr;
   }
+
+  /**
+   * @brief Checks if the value of `val` is guarded to be less than
+   * something by walking regions from `val` upwards.
+   */
+  static auto is_guarded_lesser(mlir::Value val) -> bool { return false; }
 
   /**
    * @brief Pass entry point.
@@ -129,17 +146,16 @@ struct sequoia_checker_pass
 
     auto check_for_sequoia = [&](CallOp call)
     {
-      for (const auto& arg : llvm::enumerate(call.getArgOperands())) {
-        if (is_unsigned_to_signed_cast(arg.value().getDefiningOp())) {
+      for (const auto& [idx, val] : llvm::enumerate(call.getArgOperands())) {
+        if (is_unsigned_to_signed_cast(val.getDefiningOp())) {
           auto callee = getCallee(call);
-          auto param  = callee.getArgument(arg.index());
-          if (llvm::any_of(param.getUsers(), has_ptr_arith_use)) {
+          auto param  = callee.getArgument(idx);
+          if (auto* pau = get_ptr_arith_use(param)) {
             llvm::errs()
                 << "Call to `" << callee.getSymName() << "` in `"
                 << fop.getSymName()
                 << "` passes an unsigned value to a signed argument (index `"
-                << arg.index()
-                << "`) and then uses it in pointer arithmetic.\n";
+                << idx << "`) and then uses it in pointer arithmetic.\n";
           }
         }
       }
